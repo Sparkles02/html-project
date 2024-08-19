@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angela Project</title>
+  </head>
+  <style>
+    h1 { 
+      text-align: center;
+      font-family: Helvetica, Arial, sans-serif;
+      color: #db7092;
+      font-size: 45px; 
+      margin: 10px auto 10px auto;
+      padding: 5px;
+    }
+    h2 {
+      text-align: center;
+      font-family: Helvetica, Arial, sans-serif;
+      color: #db7092;
+      font-size: 30px;
+    }
+    img {
+      display: block;
+      margin: 60px auto;
+    }
+    p {
+      text-align: center;
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 300;
+      padding: 0 0 24px;
+      color: azure;
+      line-height: 30px;
+    }
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    button {
+      margin: 0 auto 20px auto;
+      display: block;
+      color: #db7092;
+      padding: 15px 20px;
+      background: transparent;
+      font-size: 16px;
+      border: 1px solid #db7092;
+      border-radius: 40px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      transition: all 200ms ease;
+      opacity: 5;
+    }
+    button:hover {
+      background: #db7092;
+      color: white;
+      border: 1px solid #db7092;
+    }
+    .project {
+       background: linear-gradient(90.2deg, rgba(190, 70, 102, 0.93) -15.6%, rgb(252, 154, 154) -15.6%, rgba(190, 70, 102, 0.92) 17.9%, rgb(58, 13, 48) 81.6%);
+       margin: 10px 300px 10px 300px;
+       padding: 100px;
+       border-radius: 40px;
+    }
+  </style>
+  <body>
+  <div class = "project">
+    <h1>
+      <strong>✨Anime✨</strong>
+    </h1>
+    <h2>or, otherwise known as Animation!</h2>
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/118/288/original/Anime.jpeg?1710009694" alt = "Popular Animes" width = "500"/>
+    <hr/>
+    <p>
+      "<strong>Anime</strong> is a Japanese animation style that is produced or influenced by it.
+      It is the Japanese term for cartoon or animation where the Japanese use
+      the word to describe all cartoons irrespective of the nation. </br> However,
+      outside Japan, anime denotes animation movies that come exclusively from
+      Japan, distinguished by blazing graphics, energetic characters, and
+      attractive themes such as sci-fi, romance, and supernatural forces.
+      Therefore, consider this syllogism:
+      <em>all anime shows are cartoons, but not all cartoons are anime. "</em>
+    </p>
+    <small>
+    <a href="https://www.nfi.edu/what-is-anime/"
+      >Read more from this website
+    </a>
+    </small>
+  <button>Get Anime Recommendations</button>
+  <p>Coded by: Siphindile Angela Dube </p>
+ </div>
+  <script>
+    function getRecommendations() {
+      let name = prompt("What is your name?");
+      let email = prompt("Enter your email address");
+      var valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+      if (valid.test(email)) {
+        let favAnime = prompt("What is your favourite anime?");
+        alert(
+          "Awesome " +name+ "! We will be in touch with anime and manga recommendations!"
+        );
+      } else {
+        alert("Invalid email address! Enter email address");
+      }
+    }
+    let getRecommendationsButton = document.querySelector("button");
+
+    getRecommendationsButton.addEventListener("click", getRecommendations);
+  </script>
+ </body>
+</html>
